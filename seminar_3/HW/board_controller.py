@@ -30,6 +30,7 @@ class Controller:
                     self.view.message_to_winner(actual_player)
                     game_over = True
                     break
-            if len(set(self.board.board)) == 2:
-                self.view.message_if_dead_heat()
-                game_over = True
+                if len(set(self.board.board)) == 2:
+                    self.view.message_if_dead_heat()
+                    game_over = True
+                    break
